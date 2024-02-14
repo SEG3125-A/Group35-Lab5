@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lousy Looks</title>
+    <!-- own styles -->
+    <!-- <link rel="stylesheet" href="style/style.css"> -->
+
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./styles/custom.css">
+</head>
+
+<!-- navbar header -->
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark fixed-top navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand ps-3"
+                style="font-family:Brush Script MT; list-style: none;font-size:3rem; color:wheat"
+                href="index.html">LousyLooks</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#service">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#booking">Booking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home section starts here  -->
+    <!-- background image -->
+    <div class="container-fluid " style="background-image: url('styles/images/salon.jpg');
+        height:100vh;object-fit:scale-down; background-color: #7e7c7c; background-blend-mode: multiply;" id="home">
+        <!-- title -->
+        <div class="container-xl text-center" style="padding-top:35vh; height:48vh; color:wheat;">
+            <h1 class="display-1" style="font-family:Brush Script MT">LOUSY LOOKS</h1>
+            <h1 class="display-4" style="font-family:Brush Script MT">Hair Saloon</h1>
+            <p
+                style="color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: larger; margin-top:5%; margin-bottom: 5%;">
+                Step into the world of LousyLooks Hair Salon, where we redefine beauty with unique flair.
+                Our skilled stylists craft personalized masterpieces, transforming your hair into a work of art.
+                From trendy cuts to vibrant colors, experience excellence at every visit. Embrace the extraordinary -
+                because at LousyLooks, your hair deserves nothing less!
+            </p>
+
+            <button type="button" class="btn btn-primary" onclick="openService()"
+                style="color: white; font-size: large;">Check out our services</button>
+        </div>
+    </div>
+    <!-- Home section ends here  -->
+
+
+    <!-- service section starts here  -->
+    <div class="container-fluid px-0 bg-white" id="service">
+        <!-- col-sm-9  not really useful -->
+        <h2 class="m-3 p-3 col-md-3 col-6 mx-auto text-center border-5 border-bottom border-info">Our services</h2>
+        <!-- <hr class="bg-danger border-2 border-top border-danger" /> -->
+
+        <!-- first row -->
+        <div class="d-flex flex-row p-3 gap-4 flex-wrap justify-content-center">
+            <div class="text-center">
+                <!-- this is each individual card -->
+                <div class="card border-3 border-dark" style="width: 300px;">
+                    <img class="card-img-top" src="./styles/images/short.png" alt="Short Hair cut">
+                    <div class="card-body">
+                        <h4 style="margin-top: 10px;" class="card-title">Short Hair Cut</h4>
+                        <p style="margin-top: 20px;" class="card-text">Clipper cut or scissors-over-comb for people who
+                            want short and simple. </p>
+                        <a style="margin-bottom: 5px; color:white;" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#modal1">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card border-4 border-dark" style="width: 300px;">
+                    <img class="card-img-top" src="./styles/images/medium.png" alt="Medium Hair cut">
+                    <div class="card-body">
+                        <h4 style="margin-top: 10px;" class="card-title">Medium Hair Cut</h4>
+                        <p style="margin-top: 20px;" class="card-text">Bobs, layers, for straight to wavy hair,
+                            perfect for professional looking.</p>
+                        <a style="margin-bottom: 5px;  color:white;" data-bs-toggle="modal" data-bs-target="#modal2"
+                            class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card border-4 border-dark" style="width: 300px;">
+                    <img class="card-img-top" src="./styles/images/long.jpeg" alt="Long Hair cut">
+                    <div class="card-body">
+                        <h4 style="margin-top: 10px;" class="card-title">Long Hair Cut</h4>
+                        <p style="margin-top: 20px;" class="card-text">Same as medium, with a longer height and more
+                            effort for thick hair.</p>
+                        <a style="margin-bottom: 5px;  color:white;" data-bs-toggle="modal" data-bs-target="#modal3"
+                            class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card border-4 border-dark" style="width: 300px;">
+                    <img class="card-img-top" src="./styles/images/colorful.jpg" alt="Colorful hair">
+                    <div class="card-body">
+                        <h4 style="margin-top: 10px;" class="card-title">Hair Color Cut</h4>
+                        <p style="margin-top: 20px;" class="card-text ">Full bleach or a refresh for your colour, we are
+                            here for you!</p>
+                        <a style="margin-bottom: 5px; color:white;" data-bs-toggle="modal" data-bs-target="#modal4"
+                            class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal short hair -->
+        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Short Hair Cut</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-justify">
+                        <p>Operations can be done by our staff: <b>junior (1-5 years of experience)</b>, <b>senior (5-10
+                                years of experience)</b> or <b>expert (10+ years of experience)</b>. The prices depend
+                            on the degree of experience you want.</p>
+                        <ul>
+                            <li>Junior: from 40$</li>
+                            <li>Senior: from 60$</li>
+                            <li>Expert: from 100$</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go back to site</button>
+                        <button type="button" class="btn btn-primary" onclick="openBooking()" data-bs-dismiss="modal">Book appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Medium Hair -->
+
+        <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Medium Hair Cut</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-justify">
+                        <p>Operations can be done by our staff: <b>junior (1-5 years of experience)</b>, <b>senior (5-10
+                                years of experience)</b> or <b>expert (10+ years of experience)</b>. The prices depend
+                            on the degree of experience you want.</p>
+                        <ul>
+                            <li>Junior: from 60$</li>
+                            <li>Senior: from 80$</li>
+                            <li>Expert: from 120$</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go back to site</button>
+                        <button type="button" class="btn btn-primary" onclick="openBooking()" data-bs-dismiss="modal">Book appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Long Hair Cut</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-justify">
+                        <p>Operations can be done by our staff: <b>junior (1-5 years of experience)</b>, <b>senior (5-10
+                                years of experience)</b> or <b>expert (10+ years of experience)</b>. The prices depend
+                            on the degree of experience you want.</p>
+                        <ul>
+                            <li>Junior: from 80$</li>
+                            <li>Senior: from 100$</li>
+                            <li>Expert: from 150$</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go back to site</button>
+                        <button type="button" class="btn btn-primary" onclick="openBooking()" data-bs-dismiss="modal">Book appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Color Hair Cut</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-justify">
+                        <p>Operations can be done by our staff: <b>junior (1-5 years of experience)</b>, <b>senior (5-10
+                                years of experience)</b> or <b>expert (10+ years of experience)</b>. The prices depend
+                            on the degree of experience you want.</p>
+                        <ul>
+                            <li>Junior: from 100$</li>
+                            <li>Senior: from 150$</li>
+                            <li>Expert: from 200$</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go back to site</button>
+                        <button type="button" class="btn btn-primary" onclick="openBooking()" data-bs-dismiss="modal">Book appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service section ends here  -->
+
+    <!-- Team section starts here  -->
+    <div class="container-fluid px-0 bg-primary-subtle" id="team">
+        <h2 class="m-3 p-3 col-md-3 col-6 mx-auto text-center border-5 border-bottom border-info">Meet the Team
+        </h2>
+
+        <div class="container-fuild location px-0">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="./styles/images/barbar1.jpg" class="img-responsive" style="width:100%" alt="Image">
+                    <p> My name is Emily Watson has been mastering the art of hairdressing for over a decade.
+                        Specializing in both classic cuts and modern styling,I brings a unique
+                        blend of creativity and precision to my work. Emily is passionate about
+                        clients' needs and crafting best hairstyles that enhance their individual beauty.</p>
+                </div>
+                <div class="col-sm-4">
+
+                    <img src="./styles/images/barbar2.jpg" class="img-responsive" style="width:100%" alt="Image">
+                    <p>My name Michael Johnson,I have over 15 years of experience in the barbering industry,I am
+                        obsessed
+                        with traditional barbering techniques. Specializing in precise fades, classic shaves,
+                        and beard grooming, I pays homage to the timeless traditions of men's grooming.
+                        I do the best to ensure that each client receives a cut that is both stylish and personalized
+                    </p>
+                </div>
+                <div class="col-sm-4">
+
+                    <img src="./styles/images/barbar3.jpg" class="img-responsive" style="width:100%" alt="Image">
+                    <p> My name Alex Rodriguez, a dynamic and talented barber with a passion for modern men's
+                        hairstyling. With 8 years of experience,I excel
+                        in creating contemporary looks ranging from textured crops to sleek pompadours.My artistic
+                        approach to hair styling
+                        allows me to design looks that are both trendy and suitable for my clients' lifestyles. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team section ends here  -->
+
+
+    <!-- Booking section starts here  -->
+    <div class="container-fluid px-0 bg-white" id="booking">
+        <h2 class="m-3 p-3 col-md-3 col-6 mx-auto text-center border-5 border-bottom border-info"> Book an appointment
+        </h2>
+        <!-- <h1 class="display-3" style="color: crimson; text-align: center; margin: 20px;"> </h1> -->
+        <div class="container-fuild location px-0">
+            <form class="row g-3 needs-validation" novalidate style="margin: 0% 25% 1% 25%;">
+                <div class="col-12">
+                    <label for="validationCustom01" class="form-label">First name</label>
+                    <input type="text" class="form-control" placeholder="Enter your first name" id="validationCustom01"
+                        required>
+                    <div class="invalid-feedback">
+                        Please fill in this field!
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="validationCustom02" class="form-label">Last name</label>
+                    <input type="text" class="form-control" placeholder="Enter your last name" id="" required>
+                    <div class="invalid-feedback">
+                        Please fill in this field!
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="validationCustom03" placeholder="Enter your e-mail"
+                        aria-describedby="emailHelp" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid e-mail!
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="validationCustom04" class="form-label">Service</label>
+                    <select class="form-control" id="validationCustom04" required>
+                        <option selected disabled value="">Click to choose a service</option>
+                        <option value="Haircut">Short Hair cut - Junior hairstylist: 40$</option>
+                        <option value="Beard Trim">Short Hair cut - Senior hairstylist: 60$</option>
+                        <option value="Beard and outline">Short Hair cut - Expert hairstylist: 100$</option>
+                        <option value="Haircut">Medium Hair cut - Junior hairstylist: 60$</option>
+                        <option value="Beard Trim">Medium Hair cut - Senior hairstylist: 80$</option>
+                        <option value="Beard and outline">Medium Hair cut - Expert hairstylist: 120$</option>
+                        <option value="Haircut">Long Hair cut - Junior hairstylist: 80$</option>
+                        <option value="Beard Trim">Long Hair cut - Senior hairstylist: 100$</option>
+                        <option value="Beard and outline">Long Hair cut - Expert hairstylist: 150$</option>
+                        <option value="Haircut">Hair color - Junior hairstylist: 100$</option>
+                        <option value="Beard Trim">Hair color - Senior hairstylist: 150$</option>
+                        <option value="Beard and outline">Hair color - Expert hairstylist: 200$</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a service!
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="validationCustom05" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="validationCustom05" required>
+                    <div class="invalid-feedback">
+                        Please select a date!
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="validationCustom06" class="form-label">Time</label>
+                    <select class="form-control" id="validationCustom06" required>
+                        <option selected disabled value="">Click to choose a time</option>
+                        <option value="9:00 AM">9.00 AM</option>
+                        <option value="10:00 AM">10.00 AM</option>
+                        <option value="11:00 AM">11.00 AM</option>
+                        <option value="12:00 PM">12.00 PM</option>
+                        <option value="1:00 PM">1.00 PM</option>
+                        <option value="2:00 PM">2.00 PM</option>
+                        <option value="3:00 PM">3.00 PM</option>
+                        <option value="4:00 PM">4.00 PM</option>
+                        <option value="5:00 PM">5.00 PM</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a time!
+                    </div>
+                </div>
+                <div class="col-12 d-flex justify-content-center" style="margin-bottom: 0%;">
+                    <button class="btn btn-primary" type="submit" style="color:white;"
+                        onclick="msgValidate()">Book
+                        appointment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Booking section ends here  -->
+
+
+    <!-- Contact section starts here  -->
+    <div class="container-fluid px-0 bg-primary-subtle" id="contact">
+        <h2 class="m-3 p-3 col-md-3 col-6 mx-auto text-center border-5 border-bottom border-info">Ask Us Anything!
+        </h2>
+
+        <div class="container-fuild location px-0 ">
+
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.317219081288!2d-75.68763901114498!3d45.42310639999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce050a6db98d73%3A0x188a59c3622fdbae!2sUniversity%20of%20Ottawa!5e0!3m2!1sen!2sca!4v1707500749452!5m2!1sen!2sca"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <div class="wrapper text-center">
+                <ul class="list-unstyled mb-2 mt-4 d-flex gap-5">
+                    <li>
+                        <i class="bi bi-telephone phone"></i>
+                        <span>+ 01 111 11 11</span>
+                    </li>
+
+                    <li>
+                        <i class="env bi bi-envelope "></i>
+                        <span>lousy@looks.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <form class="form">
+                <div class="form-group p-2 w-100">
+                    <label for="InputEmail1">Email address</label>
+                    <input type="email" class="form-control m-3" id="InputEmailContactGen" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Your question</label>
+                    <textarea class="form-control m-3" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary" style="color:white">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <!-- Contact section ends here  -->
+
+    <!-- footer section starts here  -->
+    <div class="jumbotron text-right footer" style="background-color: rgb(25, 25, 25);">
+        <footer class="blockquote-footer" style="color:white; font-family:apple chancery">Made with &#x1F90D; by Lolita
+            I., David M., Leon L, Amani L</footer>
+    </div>
+    <!-- footer section ends here  -->
+
+
+    <script src="basic.js"></script>
+    <script src="bookingValidation.js"></script>
+    <script src="./scripts/main.js"></script>
+
+
+</body>
+
+</html>
