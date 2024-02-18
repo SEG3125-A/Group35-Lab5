@@ -12103,3 +12103,27 @@ body {
 .navbar-toggler {
   margin-left: 2rem;
 }/*# sourceMappingURL=custom.css.map */
+
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #D1BE9C;
+  border: none;
+}
+
+#panel {
+  padding: 5px;
+  display: none;
+}
+
+#panel2, #flip2 {
+  padding: 5px;
+  text-align: center;
+  background-color: #D1BE9C;
+  border: none;
+}
+
+#panel2 {
+  padding: 5px;
+  display: none;
+}
