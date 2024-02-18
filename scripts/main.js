@@ -173,6 +173,15 @@ $(document).ready(function() {
     });
 
     $("#InputEmailContactGen").tooltip();
+    
+	// leon's flip function for slide bar 
+  	$("#flip").click(function(){
+    	$("#panel").slideToggle("slow");
+  	});
+  	
+  	$("#flip2").click(function(){
+    	$("#panel2").slideToggle("slow");
+  	});
 
 
 
