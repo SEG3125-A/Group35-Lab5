@@ -39,13 +39,13 @@
         <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" id="homeId" href="#home">Home</a>
+                    <a class="nav-link" id="homeId" href="#home"><img src="./styles/images/home.png" alt="homeLogo" style="width:30px; margin-right: 1rem;">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#service"><img src="./styles/images/ServicesIcon.png" alt="servicesLogo" style="width:30px; margin-right: 1rem;">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#team">Team</a>
+                    <a class="nav-link" href="#team"><img src="./styles/images/team.png" alt="bookingLogo" style="width:30px; margin-right: 1rem;">Team</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#booking"><img src="./styles/images/booking.png" alt="bookingLogo" style="width:30px; margin-right: 1rem;">Booking</a>
@@ -247,7 +247,7 @@
 
     <!-- Team section starts here  -->
     <div class="container-fluid px-0 bg-primary-subtle" id="team">
-        <h2 class="m-3 p-3 col-md-3 col-6 mx-auto text-center border-5 border-bottom border-info">Meet the Team
+        <h2 class="m-3 p-3 col-md-3 col-6 mx-auto text-center border-5 border-bottom border-info"><img src="./styles/images/team.png" alt="BookingLogo" style="width:40px; margin-right: 1rem;background-color: #D1BE9C;padding: .5rem;border-radius: 6px;"> Meet the Team
         </h2>
 
         <div class="container-fuild location px-0">
@@ -292,39 +292,38 @@
         <div class="container-fuild location px-0">
             <form class="row g-3 needs-validation" novalidate style="margin: 0% 25% 1% 25%;">
                 <div class="col-12">
-                    <label for="validationCustom01" class="form-label">First name</label>
-                    <input type="text" class="form-control" placeholder="Enter your first name" id="validationCustom01"
-                        required>
-                    <div class="invalid-feedback">
+                    <label for="firstName" class="form-label">First name</label>
+                    <input type="text" class="form-control m-3" placeholder="Enter your first name" id="firstName"
+                       pattern="([a-z][/s]?)+" required>
+                    <div class="invalid-feedback" id="fname_feedback">
                         Please fill in your first name!
                     </div>
                 </div>
                 <div class="col-12">
-                    <label for="validationCustom02" class="form-label">Last name</label>
-                    <input type="text" class="form-control" placeholder="Enter your last name" id="validationCustom02" required>
-                    <div class="invalid-feedback">
-                        Please fill in your lastname!
+                    <label for="lastName" class="form-label">Last name</label>
+                    <input type="text" class="form-control m-3" placeholder="Enter your last name" id="lastName" pattern="([a-z][/s]?)+" required>
+                    <div class="invalid-feedback" id="lname_feedback">
+                        Please fill in your last name!
                     </div>
                 </div>
                 <div class="col-12">
                     <label for="InputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="InputEmail1" placeholder="Enter your e-mail"
-                        aria-describedby="emailHelp" required>
-                    <div class="invalid-feedback">
+                    <input type="email" class="form-control m-3" id="InputEmail1" placeholder="Enter your e-mail"
+                       title="Accepted format: aaa@aaa.aaa" aria-describedby="emailHelp" required>
+                    <div class="invalid-feedback" id="feedback_mail">
                         Please provide a valid e-mail!
                     </div>
                 </div>
                 <div class="col-12">
                     <label for="InputNumber" class="form-label">Phone number</label>
-                    <input class="form-control" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="InputNumber" placeholder="XXX-XXX-XXXX"
-                         required>
-                    <div class="invalid-feedback">
+                    <input class="form-control m-3" type="tel" id="InputNumber" name="phone" title="Accepted format: XXX-XXX-XXXX, XXXXXXXXXX, XXX XXX XXX, XXX.XXX.XXXX" pattern="[0-9]{3}[\-\s\.]?[0-9]{3}[\-\s\.]?[0-9]{4}" placeholder="XXX-XXX-XXXX" required>
+                    <div class="invalid-feedback" id="feedback_number">
                         Please provide a valid number!
                     </div>
                 </div>
                 <div class="col-12">
                     <label for="validationCustom04" class="form-label">Service</label>
-                    <select class="form-control" id="validationCustom04" required>
+                    <select class="form-control m-3" id="validationCustom04" required>
                         <option selected disabled value="">Click to choose a service</option>
                         <option value="Haircut">Short Hair cut - Junior hairstylist: 40$</option>
                         <option value="Beard Trim">Short Hair cut - Senior hairstylist: 60$</option>
@@ -345,14 +344,14 @@
                 </div>
                 <div class="col-12">
                     <label for="validationCustom05" class="form-label">Date</label>
-                    <input type="date" class="form-control" id="validationCustom05" required>
+                    <input type="date" class="form-control m-3" id="validationCustom05" required>
                     <div class="invalid-feedback">
                         Please select a date!
                     </div>
                 </div>
                 <div class="col-12">
                     <label for="validationCustom06" class="form-label">Time</label>
-                    <select class="form-control" id="validationCustom06" required>
+                    <select class="form-control m-3" id="validationCustom06" required>
                         <option selected disabled value="">Click to choose a time</option>
                         <option value="9:00 AM">9.00 AM</option>
                         <option value="10:00 AM">10.00 AM</option>
@@ -369,7 +368,7 @@
                     </div>
                 </div>
                 <div class="col-12 d-flex justify-content-center" style="margin-bottom: 0%;">
-                    <button class="btn btn-primary" type="submit" style="color:white;"
+                    <button class="btn btn-primary" id="appointment" type="submit" style="color:white;"
                         onclick="msgValidate()">Book
                         appointment</button>
                 </div>
