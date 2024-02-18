@@ -30,6 +30,36 @@ const clearFields = ()=>{
 
 
 $(document).ready(function() {
+    $("#homeId").addClass("active");
+
+    $(".nav-link").on("click", function(){
+        $(".nav-link").removeClass("active");
+        $(this).addClass("active");
+    });
+
+    // Lolita addings that Amani moved here 
+    $("input").focus(function(){
+        $(this).css("background-color", "#fbfbf0")
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "white")
+    });
+
+    $("textarea").focus(function(){
+        $(this).css("background-color", "#fbfbf0")
+    });
+    $("textarea").blur(function(){
+        $(this).css("background-color", "white")
+    });
+
+    $("select").focus(function(){
+        $(this).css("background-color", "#fbfbf0")
+    });
+    $("select").blur(function(){
+        $(this).css("background-color", "white")
+    });
+
+    
     $( "#dialogEm").dialog({
         autoOpen: false,
         modal:true,
@@ -117,6 +147,8 @@ $(document).ready(function() {
     $("#exampleFormControlTextarea1").on("mouseleave", function(){
         $("#exampleFormControlTextarea1").removeClass("showInput");
     });
+
+
 
 
 
