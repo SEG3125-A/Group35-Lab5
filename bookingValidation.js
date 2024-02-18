@@ -59,7 +59,7 @@ function phoneNumberValid(){
 function firstNametextOnly(){
     var regexNotNumber=/[^0-9]/;
     var name = document.getElementById('firstName').value;
-    if(regexNotNumber.test(String(name))){
+    if(regexNotNumber.test(name)){
         return true;
     }
     else{
@@ -72,7 +72,7 @@ function firstNametextOnly(){
 function lastNametextOnly(){
     var regexNotNumber=/[^0-9]/;
     var name = document.getElementById('lastName').value;
-    if(regexNotNumber.test(String(name))){
+    if(regexNotNumber.test(name)){
         return true;
     }
     else{
@@ -102,7 +102,7 @@ $(document).ready(function() {
 
         if(document.getElementById("firstName").value != "" && !firstNametextOnly()){
 
-            $("#fname_feedback").text("Digits should not be included in your name");
+            $("#fname_feedback").text("Only letters are acccepted in this field");
         }
         else if(document.getElementById("firstName").value == ""){
             $("#fname_feedback").text("Please fill in your first name!");
@@ -110,7 +110,7 @@ $(document).ready(function() {
 
         if(document.getElementById("lastName").value != "" && !lastNametextOnly()){
 
-            $("#lname_feedback").text("Digits should not be included in your name");
+            $("#lname_feedback").text("Only letters are acccepted in this field");
         }
         else if(document.getElementById("lastName").value == ""){
             $("#lname_feedback").text("Please fill in your last name!");
