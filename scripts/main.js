@@ -48,24 +48,24 @@ $(document).ready(function() {
 
     // Lolita addings that Amani moved here 
     $("input").focus(function(){
-        $(this).css("background-color", "#fbfbf0")
+        $(this).css("background-color", "#fbfbf0");
     });
     $("input").blur(function(){
-        $(this).css("background-color", "white")
+        $(this).css("background-color", "white");
     });
 
     $("textarea").focus(function(){
-        $(this).css("background-color", "#fbfbf0")
+        $(this).css("background-color", "#fbfbf0");
     });
     $("textarea").blur(function(){
-        $(this).css("background-color", "white")
+        $(this).css("background-color", "white");
     });
 
     $("select").focus(function(){
-        $(this).css("background-color", "#fbfbf0")
+        $(this).css("background-color", "#fbfbf0");
     });
     $("select").blur(function(){
-        $(this).css("background-color", "white")
+        $(this).css("background-color", "white");
     });
 
     $("input").on("mouseenter", function(){
