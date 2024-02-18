@@ -35,7 +35,6 @@ function emailValid(){
     var regexMail = /^[a-z]+\.?[a-z]+@[a-z]+\.[a-z]+/;
     var mailInput = document.getElementById("InputEmail1").value;
     if(regexMail.test(mailInput)){
-        document.getElementById("InputNumber").validity.valid = true;
         return true;
     }
     else{
@@ -48,7 +47,6 @@ function phoneNumberValid(){
     var regexPhone = /^[0-9]{3}[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$/;
     var numberInput = document.getElementById("InputNumber").value;
     if(regexPhone.test(numberInput)){
-        document.getElementById("InputNumber").validity.valid = true;
         return true;
 
     }
@@ -62,7 +60,6 @@ function firstNametextOnly(){
     var regexNotNumber=/[^0-9]/;
     var name = document.getElementById('firstName').value;
     if(regexNotNumber.test(String(name))){
-        document.getElementById("InputNumber").validity.valid = true;
         return true;
     }
     else{
@@ -76,7 +73,6 @@ function lastNametextOnly(){
     var regexNotNumber=/[^0-9]/;
     var name = document.getElementById('lastName').value;
     if(regexNotNumber.test(String(name))){
-        document.getElementById("InputNumber").validity.valid = true;
         return true;
     }
     else{
