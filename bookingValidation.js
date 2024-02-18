@@ -28,5 +28,18 @@ function msgValidate() {
     }
     if (error == false) {
         alert("Your appointment is confirmed!");
+        toggle();
     }
+}
+
+function toggle(){
+	let element = document.getElementById("payment");
+	let hidden = element.getAttribute("hidden");
+	
+	if (hidden) {
+       element.removeAttribute("hidden");
+    } else {
+       element.setAttribute("hidden", "hidden");
+    }
+
 }

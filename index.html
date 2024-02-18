@@ -357,16 +357,45 @@
                     </div>
                 </div>
                 <div class="col-12 d-flex justify-content-center" style="margin-bottom: 0%;">
-                    <button class="btn btn-primary" type="submit" style="color:white;"
-                        onclick="msgValidate()">Book
-                        appointment</button>
+                    <button class="btn btn-primary" type="submit" id="book" style="color:white;"
+                        onclick="msgValidate();" >Book appointment</button>
+                </div>
+                <!-- button to bring them to payment  -->
+                <div class="col-12 d-flex justify-content-center" style="margin-bottom: 0%;">
+                    <button class="btn btn-primary" type="submit" id="payment" style="color:white;" 
+                    	 data-bs-toggle="modal" data-bs-target="#paymentextend">Online Payment Options</button>
                 </div>
             </form>
         </div>
     </div>
     <!-- Booking section ends here  -->
-
-
+    
+    <!-- Payment section starts here  -->
+    <!-- This section pops up as an onclick from comfirming your booking -->
+    <div class="modal fade" id="paymentextend" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Online Checkout</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-justify">
+                        <p>Please Enter your payment details
+                        <ul>
+                            <li>Junior: from 40$</li>
+                            <li>Senior: from 60$</li>
+                            <li>Expert: from 100$</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go back to site</button>
+                        <button type="button" class="btn btn-primary" onclick="openBooking()" data-bs-dismiss="modal">Book appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	<!-- Payment section ends here  -->
+	
     <!-- Contact section starts here  -->
     <div class="container-fluid px-0 bg-primary-subtle" id="contact">
         <h2 class="m-3 p-3 col-md-3 col-6 mx-auto text-center border-5 border-bottom border-info">Ask Us Anything!
