@@ -70,19 +70,19 @@ body {
     margin-top: 10px;
 }
 
-.phone,.env {
-    font-size: 3rem;
-    // color: #7D4F50;
-    // background-color: #fff;
-    // border-radius: 10px;
-    // padding: 10px;
-    // margin: 5px;
-}
+// .phone,.env {
+//     font-size: 3rem;
+//     // color: #7D4F50;
+//     // background-color: #fff;
+//     // border-radius: 10px;
+//     // padding: 10px;
+//     // margin: 5px;
+// }
 
-.env {
-    color: #7D4F50;
-    background-color: #fff;
-}
+// .env {
+//     color: #7D4F50;
+//     background-color: #fff;
+// }
 
 
 .footer {
@@ -146,6 +146,20 @@ body {
     background-color: rgb(119, 125, 126);
 }
 
-.navbar-nav{
+#collapsibleNavbar{
+    margin-top: 1rem;
     margin-right: 2rem;
+    margin-left: 2rem;
+    // border: 2px solid red;
+}
+
+.nav-link {
+    width: 8rem;
+    text-align: center;
+    // border: 2px solid purple;
+    margin: .25rem;
+}
+
+.navbar-toggler{
+    margin-left: 2rem;
 }

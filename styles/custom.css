@@ -194,7 +194,6 @@
 }
 
 body {
-  overflow-x: hidden;
   margin: 0;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
@@ -12032,15 +12031,6 @@ body {
   margin-top: 10px;
 }
 
-.phone, .env {
-  font-size: 3rem;
-}
-
-.env {
-  color: #7D4F50;
-  background-color: #fff;
-}
-
 .footer {
   margin: 0 auto;
   text-align: center;
@@ -12098,6 +12088,18 @@ body {
   background-color: rgb(119, 125, 126);
 }
 
-.navbar-nav {
+#collapsibleNavbar {
+  margin-top: 1rem;
   margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.nav-link {
+  width: 8rem;
+  text-align: center;
+  margin: 0.25rem;
+}
+
+.navbar-toggler {
+  margin-left: 2rem;
 }/*# sourceMappingURL=custom.css.map */

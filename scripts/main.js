@@ -172,6 +172,8 @@ $(document).ready(function() {
         $("#exampleFormControlTextarea1").removeClass("showInput");
     });
 
+    $("#InputEmailContactGen").tooltip();
+
 
 
 
