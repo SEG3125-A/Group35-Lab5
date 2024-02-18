@@ -1,3 +1,4 @@
+// Used to validate general contact form fields
 const validateFields = (message)=>{
     // console.log("the email is");
     if (message == "email") {
@@ -30,7 +31,15 @@ const clearFields = ()=>{
 
 
 $(document).ready(function() {
+    // When the page loads, the home navlink should be active and whenever we refresh, we should go to home page and no prior data should be on 
+    // the link of the website
     $("#homeId").addClass("active");
+    $(window).scrollTop(0);
+
+    if (window.location.hash) {
+        history.replaceState(null, null, ' ');
+    }
+    // Adding active classes
 
     $(".nav-link").on("click", function(){
         $(".nav-link").removeClass("active");
@@ -59,7 +68,22 @@ $(document).ready(function() {
         $(this).css("background-color", "white")
     });
 
-    
+    $("input").on("mouseenter", function(){
+        $(this).addClass("showInput");
+    });
+
+    $("input").on("mouseleave", function(){
+        $(this).removeClass("showInput");
+    });
+    $("select").on("mouseenter", function(){
+        $(this).addClass("showInput");
+    });
+
+    $("select").on("mouseleave", function(){
+        $(this).removeClass("showInput");
+    });
+
+    // General Contact form pop ups 
     $( "#dialogEm").dialog({
         autoOpen: false,
         modal:true,
