@@ -11985,6 +11985,8 @@ textarea.form-control-lg {
 
 body {
   min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .card-img-top {
@@ -12032,10 +12034,6 @@ body {
 
 .phone, .env {
   font-size: 3rem;
-  color: #7D4F50;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 10px;
 }
 
 .env {
@@ -12050,4 +12048,48 @@ body {
   padding: 2rem;
   width: 100%;
   font-size: 1.5em;
+}
+
+.ui-dialog {
+  top: 0;
+  left: 0;
+  padding: 0.2em;
+  border: 1px;
+  border-radius: 8px;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  border: 1px;
+  background-color: #D1BE9C;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.ui-dialog-titlebar-close {
+  display: none;
+}
+
+.ui-dialog-buttonpane {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ui-dialog-buttonset button {
+  align-items: center;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem;
+  border: 2px solid #CC8B86;
+  background-color: #D1BE9C;
+  color: #fff;
+}
+
+.showInput {
+  border: 3px solid black;
+}
+
+.ui-icon.ui-icon-person {
+  font-size: 40px;
 }/*# sourceMappingURL=custom.css.map */
