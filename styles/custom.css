@@ -12092,4 +12092,12 @@ body {
 
 .ui-icon.ui-icon-person {
   font-size: 40px;
+}
+
+.active {
+  background-color: rgb(119, 125, 126);
+}
+
+.navbar-nav {
+  margin-right: 2rem;
 }/*# sourceMappingURL=custom.css.map */
