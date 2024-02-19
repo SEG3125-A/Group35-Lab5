@@ -39,12 +39,39 @@ $(document).ready(function() {
     if (window.location.hash) {
         history.replaceState(null, null, ' ');
     }
-    // Adding active classes
+    // Adding active classes 
 
     $(".nav-link").on("click", function(){
         $(".nav-link").removeClass("active");
         $(this).addClass("active");
     });
+
+     //adding active classes when entering related section
+    $("#home").on("mouseenter",function(){
+        $(".nav-link").removeClass("active");
+        $('#homeId').addClass("active");
+        
+    })
+    $("#service").on("mouseenter",function(){
+        $(".nav-link").removeClass("active");
+        $('#service-navlink').addClass("active");
+        
+    })
+    $("#team").on("mouseenter",function(){
+        $(".nav-link").removeClass("active");
+        $('#team-navlink').addClass("active");
+        
+    })
+    $("#booking").on("mouseenter",function(){
+        $(".nav-link").removeClass("active");
+        $('#booking-navlink').addClass("active");
+        
+    })
+    $("#contact").on("mouseenter",function(){
+        $(".nav-link").removeClass("active");
+        $('#contact-navlink').addClass("active");
+        
+    })
 
     // Lolita addings that Amani moved here 
     $("input").focus(function(){
