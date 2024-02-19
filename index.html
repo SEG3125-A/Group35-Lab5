@@ -253,32 +253,37 @@
         <div class="container-fuild location px-0">
             <div class="row">
                 <div class="col-sm-4">
-                    <img src="./styles/images/barbar1.jpg" class="img-responsive" style="width:100%" alt="Image">
-                    <p> My name is Emily Watson has been mastering the art of hairdressing for over a decade.
-                        Specializing in both classic cuts and modern styling,I brings a unique
-                        blend of creativity and precision to my work. Emily is passionate about
-                        clients' needs and crafting best hairstyles that enhance their individual beauty.</p>
+                  <img src="styles/images/barbar1.jpg" class="img-responsive" style="width:100%" alt="Image">
+                  <p> My name is Emily Watson has been mastering the art of hairdressing for over a decade. 
+                    <span class="more-text">Specializing in both classic cuts and modern styling, I brings a unique 
+                    blend of creativity and precision to my work. Emily is passionate about 
+                    clients' needs and crafting the best hairstyles that enhance their individual beauty.</span>
+                  </p>
+                  <button class="read-more-btn" title="Click to read more about Emily Watson">Read More</button>
+            
+                  
                 </div>
-                <div class="col-sm-4">
-
-                    <img src="./styles/images/barbar2.jpg" class="img-responsive" style="width:100%" alt="Image">
-                    <p>My name Michael Johnson,I have over 15 years of experience in the barbering industry,I am
-                        obsessed
-                        with traditional barbering techniques. Specializing in precise fades, classic shaves,
-                        and beard grooming, I pays homage to the timeless traditions of men's grooming.
-                        I do the best to ensure that each client receives a cut that is both stylish and personalized
-                    </p>
+                
+                <div class="col-sm-4"> 
+                  
+                  <img src="styles/images/barbar2.jpg" class="img-responsive" style="width:100%" alt="Image">
+                  <p>My name Michael Johnson,I have over 15 years of experience in the barbering industry,I am obsessed 
+                    with traditional barbering techniques. <span class="more-text" >in precise fades, classic shaves, 
+                    and beard grooming, I pays homage to the timeless traditions of men's grooming. 
+                  I do the best to ensure that each client receives a cut that is both stylish and personalized</span></p>
+                  <button class="read-more-btn" title="Click to read more about Michael Johnson">Read More</button>
+            
                 </div>
-                <div class="col-sm-4">
-
-                    <img src="./styles/images/barbar3.jpg" class="img-responsive" style="width:100%" alt="Image">
-                    <p> My name Alex Rodriguez, a dynamic and talented barber with a passion for modern men's
-                        hairstyling. With 8 years of experience,I excel
-                        in creating contemporary looks ranging from textured crops to sleek pompadours.My artistic
-                        approach to hair styling
-                        allows me to design looks that are both trendy and suitable for my clients' lifestyles. </p>
+                <div class="col-sm-4"> 
+                  
+                  <img src="styles/images/barbar3.jpg" class="img-responsive" style="width:100%" alt="Image">
+                  <p> My name Alex Rodriguez, a dynamic and talented barber with a passion for modern men's hairstyling.<span class="more-text"> With 8 years of experience,I excel
+                    in creating contemporary looks ranging from textured crops to sleek pompadours.My artistic approach to hair styling
+                    allows me to design looks that are both trendy and suitable for my clients' lifestyles.</span> </p>
+                    <button class="read-more-btn" title="Click to read more about Alex Rodriguez">Read More</button>
+            
                 </div>
-            </div>
+              </div>
         </div>
     </div>
     <!-- Team section ends here  -->
@@ -314,6 +319,20 @@
                     </div>
                 </div>
                 <div class="col-12">
+                    <label for="professional" class="form-label">Professional</label>
+                    <select class="form-control" id="professional" required>
+                      <option selected disabled value="">Choose professional</option>
+                      <option value="EmilyWatson">Emily Watson</option>
+                      <option value="MichaelJohnson">Micheal Johnson</option>
+                      <option value="AlexRodriguez">Alex Rodriguez</option>
+                      <option value="EarliestAvailabilty">Earliest Availabilty</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a professional availability option!
+                    </div>
+                  </div>
+    
+                <div class="col-12">
                     <label for="InputNumber" class="form-label">Phone number</label>
                     <input class="form-control m-3" type="tel" id="InputNumber" name="phone" title="Accepted format: XXX-XXX-XXXX, XXXXXXXXXX, XXX XXX XXX, XXX.XXX.XXXX" pattern="[0-9]{3}[\-\s\.]?[0-9]{3}[\-\s\.]?[0-9]{4}" placeholder="XXX-XXX-XXXX" required>
                     <div class="invalid-feedback" id="feedback_number">
@@ -342,12 +361,12 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <label for="validationCustom05" class="form-label">Date</label>
-                    <input type="date" class="form-control m-3" id="validationCustom05" required>
+                    <label for="datepicker" class="form-label">Date</label>
+                    <input type="text" class="form-control" id="datepicker" required placeholder="mm-dd-yyyy">
                     <div class="invalid-feedback">
-                        Please select a date!
+                      Please select a date!
                     </div>
-                </div>
+                  </div>
                 <div class="col-12">
                     <label for="validationCustom06" class="form-label">Time</label>
                     <select class="form-control m-3" id="validationCustom06" required>

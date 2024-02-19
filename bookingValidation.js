@@ -119,3 +119,66 @@ $(document).ready(function() {
     $("#feedback_mail").tooltip();
     $("#feedback_number").tooltip();
 })
+$(function() {
+    var professionalAvailability = {
+        "EmilyWatson": [1, 2, 3, 4], 
+        "MichaelJohnson": [2, 3, 4, 5], 
+        "AlexRodriguez": [1, 2,  3, 4], 
+    };
+
+    $("#professional").change(function() {
+        var selectedProfessional = $(this).val();
+        var availableDays = professionalAvailability[selectedProfessional];
+        $("#datepicker").datepicker("destroy").datepicker({
+            beforeShowDay: function(date) {
+                var day = date.getDay();
+                if (availableDays && availableDays.length > 0) {
+                    return [availableDays.includes(day)];
+                } else {
+                    return [true]; 
+                }
+            },
+            onSelect: function() {
+                $(this).trigger('change'); 
+            }
+        });
+    });
+
+    
+    $("#datepicker").datepicker();
+
+   
+    $('form').on('submit', function(event) {
+        if (!this.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        $(this).addClass('was-validated'); 
+    });
+
+    $("#datepicker").change(function() {
+        if (this.value) {
+            $(this).removeClass('is-invalid').addClass('is-valid');
+        } else {
+            $(this).removeClass('is-valid').addClass('is-invalid');
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var readMoreBtns = document.querySelectorAll('.read-more-btn');
+    readMoreBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var moreText = this.previousElementSibling.querySelector('.more-text');
+        if (moreText.style.display === "none" || moreText.style.display === "") {
+          moreText.style.display = "inline"; 
+          btn.textContent = "Read Less"; 
+        } else {
+          moreText.style.display = "none"; 
+          btn.textContent = "Read More";
+        }
+      });
+    });
+  });
+  
+  
