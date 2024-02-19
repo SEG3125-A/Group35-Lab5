@@ -35,10 +35,11 @@ function emailValid(){
     var regexMail = /^[a-z]+\.?[a-z]+@[a-z]+\.[a-z]+/;
     var mailInput = document.getElementById("InputEmail1").value;
     if(regexMail.test(mailInput)){
+        
         return true;
     }
     else{
-        document.getElementById("InputEmail1").validity.valid = false;
+        
         return false;
     }
 }
@@ -46,12 +47,11 @@ function emailValid(){
 function phoneNumberValid(){
     var regexPhone = /^[0-9]{3}[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$/;
     var numberInput = document.getElementById("InputNumber").value;
-    if(regexPhone.test(numberInput)){
+    if(regexPhone.test(numberInput)){ 
         return true;
 
     }
     else{
-        document.getElementById("InputNumber").validity.valid = false;
         return false;
     }
 }
@@ -63,7 +63,6 @@ function firstNametextOnly(){
         return true;
     }
     else{
-        document.getElementById("firstName").validity.valid = false;
         return false;
     }
 
@@ -76,7 +75,6 @@ function lastNametextOnly(){
         return true;
     }
     else{
-        document.getElementById("lastName").validity.valid = false;
         return false;
     }
 
