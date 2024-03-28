@@ -318,19 +318,7 @@
                         Please provide a valid e-mail!
                     </div>
                 </div>
-                <div class="col-12">
-                    <label for="professional" class="form-label">Professional</label>
-                    <select class="form-control" id="professional" required>
-                      <option selected disabled value="">Choose professional</option>
-                      <option value="EmilyWatson">Emily Watson</option>
-                      <option value="MichaelJohnson">Micheal Johnson</option>
-                      <option value="AlexRodriguez">Alex Rodriguez</option>
-                      <option value="EarliestAvailabilty">Earliest Availabilty</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Please select a professional availability option!
-                    </div>
-                  </div>
+                
     
                 <div class="col-12">
                     <label for="InputNumber" class="form-label">Phone number</label>
@@ -356,13 +344,28 @@
                         <option value="Beard Trim">Hair color - Senior hairstylist: 150$</option>
                         <option value="Beard and outline">Hair color - Expert hairstylist: 200$</option>
                     </select>
+
+                    <!-- Lolita moved David's code here -->
+                    <div class="col-12">
+                        <label for="professional" class="form-label">Professional</label>
+                        <select class="form-control m-3" id="professional" required>
+                          <option selected disabled value="">Choose professional</option>
+                          <option value="EmilyWatson">Emily Watson</option>
+                          <option value="MichaelJohnson">Micheal Johnson</option>
+                          <option value="AlexRodriguez">Alex Rodriguez</option>
+                          <option value="EarliestAvailabilty">Earliest Availabilty</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please select a professional availability option!
+                        </div>
+                      </div>
                     <div class="invalid-feedback">
                         Please select a service!
                     </div>
                 </div>
                 <div class="col-12">
                     <label for="datepicker" class="form-label">Date</label>
-                    <input type="text" class="form-control" id="datepicker" required placeholder="mm-dd-yyyy">
+                    <input type="text" class="form-control m-3" id="datepicker" required placeholder="mm-dd-yyyy">
                     <div class="invalid-feedback">
                       Please select a date!
                     </div>
