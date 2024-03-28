@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "@google-cloud/dialogflow": "^6.5.0",
     "bootstrap": "^5.3.2",
-    "bootstrap-icons": "^1.11.3"
+    "bootstrap-icons": "^1.11.3",
+    "express": "^4.19.2"
   }
 }

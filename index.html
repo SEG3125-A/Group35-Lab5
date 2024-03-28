@@ -544,6 +544,12 @@
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
+            <iframe
+                allow="microphone;"
+                width="350"
+                height="430"
+                src="https://console.dialogflow.com/api-client/demo/embedded/892794fe-3b45-4166-9c7a-fc7ac10e7847">
+            </iframe>
 
             <div class="wrapper text-center">
                 <ul class="list-unstyled mb-2 mt-4 d-flex gap-5">
@@ -577,6 +583,23 @@
                     <a class="btn btn-primary" id="openerContact" style="color:white">Submit</a>
                 </div>
             </form>
+             <!-- Chatbox container
+        <div class="chatbox-container" style="position: fixed; bottom: 0; right: 0; margin: 10px; max-width: 350px; z-index: 1000;">
+            <div class="chatbox" id="chatbox" style="background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                <div class="chatbox-header" style="padding: 10px; background-color: #007bff; color: white; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                    <span>Chat with Us!</span>
+                    <button onclick="toggleChatbox()" style="background: none; border: none; color: white; float: right;">&#x2715;</button>
+                </div>
+                <div class="chatbox-body" id="chatbox-body" style="height: 300px; overflow-y: auto; padding: 10px;">
+                    
+                </div>
+                <div class="chatbox-footer" style="padding: 10px;">
+                    <input type="text" id="chatbox-input" style="width: calc(100% - 60px); padding: 5px;" placeholder="Type a message...">
+                    <button onclick="sendMessage()" style="width: 50px; padding: 5px; margin-left: 5px;">Send</button>
+                </div>
+            </div>
+        </div>  -->
+
             <div id="dialogEm" title="Invalid Email">
                 <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>Please enter a valid email address.ex: aaa@gmail.com or aaa.bb@gmail.com</p>
             </div>
@@ -601,6 +624,7 @@
     <script src="basic.js"></script>
     <script src="bookingValidation.js"></script>
     <script src="./scripts/main.js"></script>
+    <script src="chat.js"></script>
 
 
 </body>
